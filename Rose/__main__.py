@@ -181,21 +181,21 @@ async def start(client, message: Message, _):
         users = await get_served_users()
         for user in users:
           served_users.append(int(user["bot_users"]))
-        await message.reply(f"""
-[👋]({random.choice(IMG)}) Hey there {message.from_user.mention}, 
-
-   My name is Rose, an  advanced telegram Group management Bot For helpYou Protect Your Groups & Suit For All Your Needs. 
+        await message.reply_photo(
+            photo=random.choice(IMG),
+            caption=f"""Hey there {message.from_user.mention} 👋
+My name is Rose, an  advanced telegram Group management Bot For helpYou Protect Your Groups & Suit For All Your Needs. 
 I currently manage about `{len(served_chats)}` groups.I have over `{len(served_users)}` users
 
 ⚒ Send Me /help For Get Commands. 
-👨‍💻Dᴇᴠᴇʟᴏᴘᴇʀ : @supunma
+👨‍💻Dᴇᴠᴇʟᴏᴘᴇʀ : @its_me_jupiter
 """,
             reply_markup=home_keyboard_pm,
         )
         return await add_served_user(message.from_user.id) 
 
 
-@app.on_message(filters.command(HELP_COMMAND))
+@app.on_message(filters.command(HELP_COMMAND) & filters.user(SUDO_USERS_ID))
 @language
 async def help_command(client, message: Message, _):
     FSub = await ForceSub(bot, message)
@@ -273,14 +273,13 @@ async def startcq(client,CallbackQuery, _):
         served_users.append(int(user["bot_users"]))
     await CallbackQuery.message.edit(
             text=f"""
-👋 Hey there {CallbackQuery.from_user.mention}, 
-
-   My name is Rose ,an  advanced telegram Group management Bot For help 
+Hey there {CallbackQuery.from_user.mention} 👋
+My name is Rose ,an  advanced telegram Group management Bot For help 
 You Protect Your Groups & Suit For All Your Needs. 
 I currently manage about `{len(served_chats)}` groups.I have over `{len(served_users)}` users
 
- ⚒ Send Me /help For Get Commands. 
-👨‍💻Dᴇᴠᴇʟᴏᴘᴇʀ : @supunma
+⚒ Send Me /help For Get Commands. 
+👨‍💻Dᴇᴠᴇʟᴏᴘᴇʀ : @its_me_jupiter
 """,
             disable_web_page_preview=True,
             reply_markup=home_keyboard_pm)
