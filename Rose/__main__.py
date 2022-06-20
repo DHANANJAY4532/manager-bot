@@ -18,7 +18,9 @@ from Rose.mongo.usersdb import *
 from Rose.mongo.restart import *
 from Rose.mongo.chatsdb import *
 from Rose.plugins.fsub import ForceSub
+from config import SUDO_USERS_ID
 import random
+
 
 loop = asyncio.get_event_loop()
 flood = {}
@@ -135,7 +137,7 @@ IMG = ["https://telegra.ph/file/c8f5c1dd990ca9a3d8516.jpg",
        "https://telegra.ph/file/68d7830ba72820f44bda0.jpg"
 ]
 
-@app.on_message(filters.command(START_COMMAND))
+@app.on_message(filters.command(START_COMMAND) & filters.user(SUDO_USERS_ID))
 @language
 async def start(client, message: Message, _):
     FSub = await ForceSub(bot, message)
