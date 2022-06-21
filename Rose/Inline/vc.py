@@ -147,12 +147,6 @@ We was added **Multi Assistant Mode** for High Number of Chats.
 • Assistant 3️⃣ :- @vcpalyassistant2
 • Assistant 4️⃣ :- @vcpalyassistant3
 • Assistant 5️⃣ :- @vcpalyassistant4
-
-**Credits** - 
--「🇮🇳」°『||ᴀᴅ•✘•ᴍᴜꜱɪᴄ||』
-- @not_just_Nikhil
-👨‍💻 - Please Don't add all assistant to your group use 1
-And also we remove assistant monthly in all groups.
 """
 @app.on_callback_query(filters.regex("_aci"))
 async def commands_callbacc(_, CallbackQuery):
@@ -167,7 +161,7 @@ async def commands_callbacc(_, CallbackQuery):
     
 close = InlineKeyboardMarkup(
         [[
-            InlineKeyboardButton('« Back', callback_data='bot_commands')
+            InlineKeyboardButton(' Back', callback_data='bot_commands')
         ]], 
 )
 
