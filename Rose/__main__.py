@@ -71,8 +71,8 @@ async def start_bot():
  _____________________________________________   
 |                                             |  
 |          Deployed Successfully              |  
-|         (C) 2021-2022 by @szteambots        | 
-|          Greetings from supun  :)           |
+|         (C) 2021-2022      | 
+|          ok bie :)           |
 |_____________________________________________|  
                                                                                                
     """)
