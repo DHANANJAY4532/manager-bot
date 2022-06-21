@@ -8,27 +8,11 @@ fbuttons = InlineKeyboardMarkup(
         [
         [
             InlineKeyboardButton(
-                text="👥Support Group", url="https://t.me/szrosesupport"
+                text="𝔹𝔸ℂ𝕂𝕌ℙ ℂℍ𝔸ℕℕ𝔼𝕃", url="https://t.me/malayalifreaksall"
             ),
-            InlineKeyboardButton(
-                text="👤News Channel", url="https://t.me/Theszrosebot"
-            )
-        ], 
+        ],  
         [
-            InlineKeyboardButton(
-                text="⚒ Source Code", url="https://github.com/szsupunma/sz-rosebot"
-            ),
-            InlineKeyboardButton(
-                text="📓 Documentation", url="https://szsupunma.gitbook.io/rose-bot"
-            )
-        ], 
-        [
-            InlineKeyboardButton(
-                text="🖥 How To Deploy Me", url="https://szsupunma.gitbook.io/rose-bot"
-            )
-        ], 
-        [
-            InlineKeyboardButton("« Back", callback_data='startcq')
+            InlineKeyboardButton(" Back", callback_data='startcq')
         ]
         ]
 )
@@ -39,36 +23,14 @@ keyboard =InlineKeyboardMarkup(
             InlineKeyboardButton(
                 text="🇱🇷 English", callback_data="languages_en"
             ),
-            InlineKeyboardButton(
-                text="🇱🇰 සිංහල", callback_data="languages_si"
-            )
         ],
         [
-            InlineKeyboardButton(
-                text="🇮🇳 हिन्दी", callback_data="languages_hi"
-            ),
-            InlineKeyboardButton(
-                text="🇮🇹 Italiano", callback_data="languages_it"
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="🇮🇳 తెలుగు", callback_data="languages_ta"
-            ),
-            InlineKeyboardButton(
-                text="🇮🇩 Indonesia", callback_data="languages_id"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="🇦🇪 عربي", callback_data="languages_ar"
-            ),
             InlineKeyboardButton(
                 text="🇮🇳 മലയാളം", callback_data="languages_ml"
             ), 
         ],
         [
-            InlineKeyboardButton("« Back", callback_data='startcq')
+            InlineKeyboardButton("Back", callback_data='startcq')
         ]
     ]
 )
