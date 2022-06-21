@@ -1,5 +1,8 @@
 from dotenv import load_dotenv
 from os import environ
+import re
+
+id_pattern = re.compile(r'^.\d+$')
 
 load_dotenv("config.env")
 
@@ -8,7 +11,7 @@ API_ID = int(environ.get("API_ID"))
 API_HASH = environ.get("API_HASH")
 API_ID1 = int(environ.get("API_ID1"))
 API_HASH1 = environ.get("API_HASH1")
-SUDO_USERS_ID = environ.get("SUDO_USERS_ID")
+SUDO_USERS_ID = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('SUDO_USERS_ID', '').split()]        
 LOG_GROUP_ID = environ.get("LOG_GROUP_ID")
 BASE_DB = environ.get("BASE_DB")
 MONGO_URL = environ.get("MONGO_URL")
