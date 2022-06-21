@@ -184,7 +184,8 @@ async def start(client, message: Message, _):
           served_users.append(int(user["bot_users"]))
         await message.reply_photo(
             photo=random.choice(IMG),
-            caption=f"""Hey there {message.from_user.mention} 👋
+            caption=f"""Hey, {message.from_user.mention} ഞാൻ ഒരു ഗ്രൂപ്പ് മാനേജർ ബോട്ട് ആണ് 
+പക്ഷേ വെറുതെ സമയം കളയണ്ട എന്നെ മലയാളി ഫ്രീക്സിൽ മാത്രമേ ഉപയോഗിക്കാൻ കഴിയൂ ...
 """,
             reply_markup=home_keyboard_pm,
         )
