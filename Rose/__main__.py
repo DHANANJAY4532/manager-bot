@@ -138,7 +138,7 @@ IMG = ["https://telegra.ph/file/c8f5c1dd990ca9a3d8516.jpg",
        "https://telegra.ph/file/68d7830ba72820f44bda0.jpg"
 ]
 
-@app.on_message(filters.command(START_COMMAND) & filters.user(SUDO_USERS_ID))
+@app.on_message(filters.command(START_COMMAND))
 @language
 async def start(client, message: Message, _):
     FSub = await ForceSub(bot, message)
@@ -192,7 +192,7 @@ async def start(client, message: Message, _):
         return await add_served_user(message.from_user.id) 
 
 
-@app.on_message(filters.command(HELP_COMMAND) & filters.user(SUDO_USERS_ID))
+@app.on_message(filters.command(HELP_COMMAND))
 @language
 async def help_command(client, message: Message, _):
     FSub = await ForceSub(bot, message)
