@@ -89,16 +89,18 @@ home_keyboard_pm = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                text=" ➕ Add Me To Your Group ➕ ",
-                url=f"http://t.me/{BOT_USERNAME}?startgroup=new",
+                text="𝕌ℙ𝔻𝔸𝕋𝔼𝕊 ℂℍ𝔸ℕℕ𝔼𝕃",
+                url="https://t.me/MF_FILM_UPDATES",
             )
         ],
         [
            InlineKeyboardButton(
-                text=" ℹ️ About", callback_data="_about"
+                text="𝕄𝕆𝕍𝕀𝔼 ℝ𝔼ℚ𝕌𝔼𝕊𝕋 𝔾ℝ𝕆𝕌ℙ",
+                url="https://t.me/+z8iuL9kThWViNjll"
             ),
             InlineKeyboardButton(
-                text="🌍 languages ", callback_data="_langs"
+                text="",
+                url="
             ),
         ],
         [
