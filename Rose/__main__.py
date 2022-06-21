@@ -91,31 +91,30 @@ home_keyboard_pm = InlineKeyboardMarkup(
             InlineKeyboardButton(
                 text="𝕌ℙ𝔻𝔸𝕋𝔼𝕊 ℂℍ𝔸ℕℕ𝔼𝕃",
                 url="https://t.me/MF_FILM_UPDATES",
-            )
+            ),
         ],
         [
            InlineKeyboardButton(
                 text="𝕄𝕆𝕍𝕀𝔼 ℝ𝔼ℚ𝕌𝔼𝕊𝕋 𝔾ℝ𝕆𝕌ℙ",
-                url="https://t.me/+z8iuL9kThWViNjll"
+                url="https://t.me/+z8iuL9kThWViNjll",
             ),
+	],
+        [
             InlineKeyboardButton(
-                text="",
-                url="
+                text="𝕄𝔸𝕃𝔸𝕐𝔸𝕃𝔸𝕄 ℍ𝔻ℝ𝕀ℙ𝕊",
+                url="https://t.me/+ufcQ6dm6MXhiOTU1",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="📮 How To Use Me", callback_data="bot_commands"
+                text="𝔸𝕃𝕃 𝕃𝔸ℕ𝔾𝕌𝔸𝔾𝔼 ℍ𝔻ℝ𝕀ℙ𝕊",
+                url="https://t.me/+idqhxK6FYXFhNDg1",              
             ),
         ],
         [
             InlineKeyboardButton(
-                text="🌐 My Website",
-                url=f"https://szrosebot.ml",
-            ),
-            InlineKeyboardButton(
-                text="🔰News Channel",
-                url=f"https://t.me/szroseupdates",
+                text="𝔻𝕍𝔻 ℝ𝕀ℙ𝕊",
+                url=f"https://t.me/+Y7JBkUOiBLliN2Fl",
             )
         ],
     ]
@@ -186,11 +185,6 @@ async def start(client, message: Message, _):
         await message.reply_photo(
             photo=random.choice(IMG),
             caption=f"""Hey there {message.from_user.mention} 👋
-My name is Rose, an  advanced telegram Group management Bot For helpYou Protect Your Groups & Suit For All Your Needs. 
-I currently manage about `{len(served_chats)}` groups.I have over `{len(served_users)}` users
-
-⚒ Send Me /help For Get Commands. 
-👨‍💻Dᴇᴠᴇʟᴏᴘᴇʀ : @its_me_jupiter
 """,
             reply_markup=home_keyboard_pm,
         )
@@ -275,13 +269,7 @@ async def startcq(client,CallbackQuery, _):
         served_users.append(int(user["bot_users"]))
     await CallbackQuery.message.edit(
             text=f"""
-Hey there {CallbackQuery.from_user.mention} 👋
-My name is Rose ,an  advanced telegram Group management Bot For help 
-You Protect Your Groups & Suit For All Your Needs. 
-I currently manage about `{len(served_chats)}` groups.I have over `{len(served_users)}` users
-
-⚒ Send Me /help For Get Commands. 
-👨‍💻Dᴇᴠᴇʟᴏᴘᴇʀ : @its_me_jupiter
+Hey, {CallbackQuery.from_user.mention}
 """,
             disable_web_page_preview=True,
             reply_markup=home_keyboard_pm)
@@ -292,12 +280,8 @@ async def help_parser(name, keyboard=None):
         keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
     return (
 """
-**Welcome to help menu**
-I'm a group management bot with some useful features.
-You can choose an option below, by clicking a button.
-If you have any bugs or questions on how to use me, 
-have a look at my [Docs](https://szsupunma.gitbook.io/rose-bot/), or head to @szteambots.
-**All commands can be used with the following: / **""",
+**I'm a group management bot with some useful features.**
+""",
         keyboard,
     )
 
@@ -338,7 +322,7 @@ async def help_button(client, query, _):
                 "Here is the help for", HELPABLE[module].__MODULE__
             )
             + HELPABLE[module].__HELP__
-            + "\n👨‍💻Dᴇᴠᴇʟᴏᴘᴇʀ : @supunma"
+            + "\n👨‍💻Dᴇᴠᴇʟᴏᴘᴇʀ : @its_me_jupiter"
         )
         if hasattr(HELPABLE[module], "__helpbtns__"):
                        button = (HELPABLE[module].__helpbtns__) + [[InlineKeyboardButton("« Back", callback_data="bot_commands")]]
