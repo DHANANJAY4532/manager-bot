@@ -113,7 +113,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
         ],
         [
             InlineKeyboardButton(
-                text="𝔻𝕍𝔻 ℝ𝕀ℙ𝕊",
+                text="𝔻𝕍𝔻ℝ𝕀ℙ𝕊",
                 url=f"https://t.me/+Y7JBkUOiBLliN2Fl",
             )
         ],
