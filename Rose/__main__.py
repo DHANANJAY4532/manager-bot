@@ -131,11 +131,11 @@ keyboard = InlineKeyboardMarkup(
     ]
 )
 
-IMG = ["https://telegra.ph/file/c8f5c1dd990ca9a3d8516.jpg",
-       "https://telegra.ph/file/77cc3154b752ce822fd52.jpg",
-       "https://telegra.ph/file/e72fb0b6a7fba177cf4c7.jpg",
-       "https://telegra.ph/file/8738a478904238e367939.jpg",
-       "https://telegra.ph/file/68d7830ba72820f44bda0.jpg"
+IMG = ["https://telegra.ph/file/73428ae4c435713e03d4b.jpg",
+       "https://telegra.ph/file/ce53b831479313d5bc4a5.jpg",
+       "https://telegra.ph/file/7f21fd8bacc98e863bcdb.jpg",
+       "https://telegra.ph/file/c20b705441df779189ad2.jpg",
+       "https://telegra.ph/file/f9964147b8dcac1639c06.jpg"
 ]
 
 @app.on_message(filters.command(START_COMMAND))
