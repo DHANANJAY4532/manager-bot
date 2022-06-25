@@ -8,13 +8,12 @@ from Rose.utils.commands import *
 
 @app.on_message(command("test"))
 async def plug(_, message):
-    szteambots = await message.reply_text(text="Hello I am rose"
+    szteambots = await message.reply_text(text="Hello I am manager of @malayalifreaksall"
     )
     supun = """
-I'm a group management bot with some useful features.
-@Theszrosebot    
+I'm a group management bot with some useful features.  [ @MALAYALIFREAKSALL ]
     """
-    await szteambots.edit_text(supun)
+    await szteambots.edit_text()
 
 __MODULE__ = "test"
 __HELP__ = """  
