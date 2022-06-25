@@ -1,5 +1,5 @@
 START_COMMAND : ["start"]
-HELP_COMMAND : ["help"]
+HELP_COMMAND : ["malayli"]
 SEND_COMMAND : ["send"]
 HIGH_PROMOTE : ["highpromote"]
 PROMOTE : ["promote","midpromote","fullpromote"]
